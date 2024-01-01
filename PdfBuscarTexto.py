@@ -17,10 +17,10 @@ for i in range(pdfreader.numPages):
     text = page.extractText()
 
     # Buscar el texto deseado
-    if "45520 OK" in text:
+    if "A48005102" in text:
 
         # Imprimir el número de página donde se encontró el texto
-        print(f"El texto '45520 OK' se encontró en la página {i + 1}")
+        print(f"El texto 'A48005102' se encontró en la página {i + 1}")
 
 # Cerrar el archivo PDF
 file.close()
