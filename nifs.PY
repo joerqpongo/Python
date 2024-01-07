@@ -1,7 +1,8 @@
 import os
 
 # Ruta de la carpeta a buscar
-ruta_carpeta = "C:\Users\jose_l_r\GASTON Y DANIELA\CONTABILIDAD - FACTURAS\entrega de facturas\facturas marcas internacionales"
+#En Gaston_____ ruta_carpeta = "C:\Users\jose_l_r\GASTON Y DANIELA\CONTABILIDAD - FACTURAS\entrega de facturas\facturas marcas internacionales"
+ruta_carpeta = "C:\JL\F_Prueba"
 
 # Palabras a buscar
 palabras_buscar = ["A48005102", "FR 15 642 048 821"]
