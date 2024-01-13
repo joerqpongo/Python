@@ -1,0 +1,5 @@
+from pypdf import PdfReader
+
+reader = PdfReader("C:/JL/F_Prueba/206037_30454555_2023.pdf")
+page = reader.pages[0]
+print(page.extract_text())

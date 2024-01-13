@@ -25,6 +25,9 @@ for archivo in os.listdir(ruta_directorio):
                 try:
                     # Extraemos el texto de la página
                     texto_pagina = pagina.extract_text()
+                    if texto_pagina.find("A48005102") != -1:
+                        print(f"El archivo {archivo} contiene el texto 'A48005102'.")
+                    else:print(f"El archivo {archivo} NooooooooooooooooooooooO contiene el texto 'A48005102'.")
                 except Exception as e:
                     print(f"Error al leer el archivo PDF: {e}")
                     texto_pagina = ""

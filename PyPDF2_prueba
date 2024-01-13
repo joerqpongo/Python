@@ -1,0 +1,23 @@
+import os
+from PyPDF2 import PdfReader
+
+# Ruta del archivo PDF
+ruta_archivo_pdf = "C:/JL/F_Prueba/206037_30454555_2023.pdf"
+
+# Verificamos si el archivo existe
+if os.path.exists(ruta_archivo_pdf):
+    # Abrimos el archivo PDF
+    with open(ruta_archivo_pdf, "rb") as f:
+        # Creamos un objeto PdfReader
+        reader = PdfReader(f)
+
+        # Accedemos a la primera página del PDF
+        primera_pagina = reader.pages[0]
+
+        # Extraemos el texto de la primera página
+        texto_pagina = primera_pagina.extract_text()
+
+        # Imprimimos el texto de la página
+        print(texto_pagina)
+else:
+    print(f"El archivo {ruta_archivo_pdf} no existe.")
