@@ -1,0 +1,53 @@
+import time
+import shutil
+import os
+import pyautogui
+
+def talk_obj(text):
+    # Simulo la función _TalkOBJ, pero con una impresión en lugar de texto a voz
+    print(text)
+
+def main():
+    # Ruta del archivo Excel
+    file_path1 = 'C:\\Users\\jose_l_r\\OneDrive - GASTON Y DANIELA\\wordpass.xlsx'
+    
+    # Lectura de credenciales desde Excel
+    usulibra = "C" + str(_ExcelReadCell(file_path1, 69, 1))
+    passlibra = _ExcelReadCell(file_path1, 69, 2)
+
+    # Cierre del libro de Excel
+    _ExcelBookClose(file_path1, 0)
+    time.sleep(0.4)
+
+    # Lanzar la aplicación LIBRA con parámetros
+    os.system("C:\\Users\\jose_l_r\\AppData\\Local\\Programs\\Libra\\Libra.exe -url https://gastonydaniela.libracloud.com:443/forms/frmservlet?config=GA19093254_saa -t 60000 -wlv 12.2.1.19.0 -idcrm GA19093254 -ww 0 -wh 0 -dpi 0")
+    
+    # Esperar a que la ventana LIBRA EDISA esté activa
+    pyautogui.winwait("LIBRA EDISA", timeout=10)
+    time.sleep(8)
+
+    # Ingresar credenciales en la ventana LIBRA EDISA
+    pyautogui.write(usulibra)
+    pyautogui.press("tab")
+    time.sleep(0.4)
+    pyautogui.write(passlibra + "{tab}{enter}")
+    time.sleep(1.5)
+
+    # Realizar acciones en la aplicación después de iniciar sesión
+    # ...
+
+    # Mover archivos a otra carpeta
+    ruta_origen = "C:\\Users\\jose_l_r\\GASTON Y DANIELA\\CONTABILIDAD - FACTURAS\\entrega de facturas\\facturas marcas internacionales\\comprobando\\registrando\\"
+    ruta_destino = "C:\\Users\\jose_l_r\\GASTON Y DANIELA\\CONTABILIDAD - FACTURAS\\entrega de facturas\\facturas marcas internacionales\\comprobando\\registrando\\registradas\\"
+
+    for filename in os.listdir(ruta_origen):
+        shutil.move(os.path.join(ruta_origen, filename), ruta_destino)
+
+    talk_obj("He terminado de registrar facturas")
+    pyautogui.hotkey("f10")
+    
+    print("Registro terminado")
+    # ...
+
+if __name__ == "__main__":
+    main()
