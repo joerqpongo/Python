@@ -1,3 +1,4 @@
+#Comprueba si existe un archivo en la carpeta elegida y ejecuta una acción
 import os
 import time
 
@@ -10,4 +11,4 @@ while True:
         print("¡Orden ejecutada correctamente!")
     else:
         print("Esperando...")
-    time.sleep(10)  # Espera 1 minuto antes de volver a comprobar
+    time.sleep(10)  # Espera 10 segundos antes de volver a comprobar
