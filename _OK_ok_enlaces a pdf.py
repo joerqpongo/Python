@@ -36,6 +36,13 @@ for directorio, _, archivos in os.walk(ruta_directorio_pdf):
 ruta_archivo_excel = "C:\\Users\\jose_l_r\\OneDrive - GASTON Y DANIELA\\_Automatizaciones\\tabvinc\Lista de facturas contabilizadas.xlsx"
 df_excel.to_excel(ruta_archivo_excel, index=False)
 
+# Guardarlo en la nueva carpeta
+ruta_archivo_excel = "C:\\Users\\jose_l_r\\GASTON Y DANIELA\CONTABILIDAD - TESORERIA\PAGOS\Tab_Vinc\Lista de facturas contabilizadas.xlsx"
+df_excel.to_excel(ruta_archivo_excel, index=False)
+
+
 # Abrir el archivo Excel generado (opcional)
 if os.path.exists(ruta_archivo_excel):
     os.startfile(ruta_archivo_excel)
+    
+print ("Archivo creado")
