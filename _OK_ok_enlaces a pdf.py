@@ -42,7 +42,7 @@ df_excel.to_excel(ruta_archivo_excel, index=False)
 
 
 # Abrir el archivo Excel generado (opcional)
-if os.path.exists(ruta_archivo_excel):
-    os.startfile(ruta_archivo_excel)
+#if os.path.exists(ruta_archivo_excel):
+#    os.startfile(ruta_archivo_excel)
     
-print ("Archivo creado")
+print ("*******************Archivo creado*******************")
