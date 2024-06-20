@@ -33,8 +33,8 @@ for directorio, _, archivos in os.walk(ruta_directorio_pdf):
             print("------------------------------")
 
 # Guardar el DataFrame en Excel
-ruta_archivo_excel = "C:\\Users\\jose_l_r\\OneDrive - GASTON Y DANIELA\\_Automatizaciones\\tabvinc\Lista de Pdfs guardados_marcas_.xlsx"
-df_excel.to_excel(ruta_archivo_excel, index=False)
+#ruta_archivo_excel = "C:\\Users\\jose_l_r\\OneDrive - GASTON Y DANIELA\\_Automatizaciones\\tabvinc\Lista de Pdfs guardados_marcas_.xlsx"
+#df_excel.to_excel(ruta_archivo_excel, index=False)
 
 # Guardarlo en la nueva carpeta
 ruta_archivo_excel = "C:\\Users\\jose_l_r\\GASTON Y DANIELA\CONTABILIDAD - TESORERIA\PAGOS\Tab_Vinc\Lista de Pdfs guardados_marcas_.xlsx"
@@ -44,6 +44,6 @@ df_excel.to_excel(ruta_archivo_excel, index=False)
 # Abrir el archivo Excel generado (opcional)
 #if os.path.exists(ruta_archivo_excel):
 #    os.startfile(ruta_archivo_excel)
-    
+print("\n\n\n")
 print("\n\n*****PDF'S DE MARCAS PROCESADOArchivo creado*************")
-print("*******************FIN*******************\n\n")
+print("*******************\tFIN\t*******************\n\n")
