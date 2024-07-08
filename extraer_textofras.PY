@@ -38,3 +38,4 @@ for archivo in os.listdir(ruta_directorio):
 # Imprimimos los metadatos de cada archivo PDF
 for archivo, info in metadatos.items():
     print(f"Metadatos del archivo {archivo}:\n{info}\n")
+    print("Parece que "+ archivo, " no tiene metadatos de interés " )
